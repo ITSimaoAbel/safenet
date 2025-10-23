@@ -266,8 +266,16 @@ const HeroSection = () => {
       alt: "Proteção e segurança"
     },
     {
-      image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&h=1080&fit=crop",
+      image: "i3.jpg",
       alt: "Comunidade unida"
+    },
+    {
+      image: "/i4.jpg",
+      alt: "Apoio e solidariedade"
+    },
+    {
+      image: "/i5.jpg",
+      alt: "Crescimento e esperança"
     }
   ];
 
@@ -314,9 +322,43 @@ const HeroSection = () => {
         <div className="container mx-auto px-4 relative z-10 h-full flex items-center justify-center">
           <div className="text-center max-w-4xl">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Você sabia que pode evitar
-              <span className="block text-yellow-300">ser traficado?</span>
+              Sua segurança começa com
+              <span className="block text-yellow-300">informação</span>
             </h1>
+
+            {/* <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              Nem toda oportunidade é
+              <span className="block text-yellow-300">uma oportunidade real</span>
+            </h1>
+
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+  Proteja-se antes de
+  <span className="block text-yellow-300">ser tarde demais</span>
+</h1>
+
+<h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+  Reconheça os sinais e
+  <span className="block text-yellow-300">salve uma vida</span>
+</h1>
+
+
+<h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+  Você tem o poder de
+  <span className="block text-yellow-300">dizer não ao tráfico</span>
+</h1>
+
+<h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+  Verifique antes de
+  <span className="block text-yellow-300">confiar</span>
+</h1>
+
+<h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+  Promessas falsas destroem
+  <span className="block text-yellow-300">vidas reais</span>
+</h1>
+
+            */}
+
             <button
               onClick={scrollToVerificador}
               className="bg-white text-indigo-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-indigo-50 transition-all shadow-2xl hover:shadow-xl hover:scale-105 transform"
