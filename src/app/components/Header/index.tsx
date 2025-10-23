@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
-import { Menu, X, Shield, AlertTriangle, Phone, Link as LinkIcon } from 'lucide-react';
+import { Menu, X, Shield, Phone } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,43 +31,62 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button 
+            <Link 
               onClick={() => scrollToSection('home')}
-              className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"
+              href={"#"}
+              className="hover:text-indigo-500 group relative text-gray-700 transition-colors font-medium"
             >
-              Início
-            </button>
-            <button 
+              <span className="relative z-10">Início</span>
+
+              <span
+                aria-hidden="true"
+                className="absolute left-0 -bottom-0.5 h-0.5 w-0 bg-indigo-700 transition-all duration-300 group-hover:w-full group-focus:w-full"
+              />
+            </Link>
+
+            <Link 
               onClick={() => scrollToSection('info')}
-              className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"
+              href={"#"}
+              className="hover:text-indigo-500 group relative text-gray-700 transition-colors font-medium"
             >
-              Informações
-            </button>
-            <button 
+              <span className="relative z-10">Informações</span>
+              <span
+                aria-hidden="true"
+                className="absolute left-0 -bottom-0.5 h-0.5 w-0 bg-indigo-700 transition-all duration-300 group-hover:w-full group-focus:w-full"
+              />
+            </Link>
+
+            <Link 
               onClick={() => scrollToSection('verificador')}
-              className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"
+              href={"#"}
+              className="hover:text-indigo-500 group relative text-gray-700 transition-colors font-medium"
             >
-              Verificar Link
-            </button>
-            <button 
+              <span className="relative z-10">Verificar Link</span>
+              <span
+                aria-hidden="true"
+                className="absolute left-0 -bottom-0.5 h-0.5 w-0 bg-indigo-700 transition-all duration-300 group-hover:w-full group-focus:w-full"
+              />
+            </Link>
+
+            <Link 
               onClick={() => scrollToSection('contato')}
+              href={"#"}
               className="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition-colors font-medium"
             >
               Denunciar
-            </button>
+            </Link>
           </nav>
 
-          {/* Mobile Menu Button */}
           <button 
             className="md:hidden text-gray-700"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+            {isMenuOpen ? <X className="w-6 h-6 hover:text-red-700 cursor-pointer" /> : <Menu className="w-6 h-6" />}
+          </button> 
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
+         {isMenuOpen && (
           <nav className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
               <button 
@@ -96,7 +116,7 @@ export default function Header() {
             </div>
           </nav>
         )}
-      </div>
+      </div> 
 
       {/* Emergency Banner */}
       <div className="bg-red-600 text-white py-2">
@@ -111,3 +131,7 @@ export default function Header() {
     </header>
   );
 }
+
+
+
+
