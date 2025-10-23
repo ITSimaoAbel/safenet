@@ -16,6 +16,16 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-md fixed w-full top-0 z-50">
+      {/* Emergency Banner */}
+      {/* <div className="bg-red-600 text-white py-2">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center space-x-2 text-sm">
+            <Phone className="w-4 h-4" />
+            <span className="font-medium">Emergência? Linha de Apoio 24h:</span>
+            <a href="tel:1400" className="underline font-bold">1400</a>
+          </div>
+        </div>
+      </div> */}
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
