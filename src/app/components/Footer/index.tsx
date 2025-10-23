@@ -1,5 +1,6 @@
+"use client";
 import React from 'react';
-import { Shield, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Heart } from 'lucide-react';
+import { Shield, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Heart, Linkedin, Youtube, Zap, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -34,7 +35,7 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
               <ul className="space-y-2 text-sm">
-                {/* <li>
+                <li>
                   <button onClick={() => scrollToSection('verificador')} className="hover:underline">
                     Verificador de Links
                   </button>
@@ -53,7 +54,7 @@ const Footer = () => {
                   <button onClick={() => scrollToSection('contato')} className="hover:underline">
                     Contato
                   </button>
-                </li> */}
+                </li>
               </ul>
             </div>  
             {/* Contato */}
@@ -62,7 +63,7 @@ const Footer = () => {
               <ul className="space-y-3 text-sm">
                 <li className="flex items-center space-x-2">
                   <Phone className="h-5 w-5 text-indigo-400" />
-                  <span>+258 123 456 789</span>
+                  <span>+258 84 292 1668</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <Mail className="h-5 w-5 text-indigo-400" />
@@ -74,7 +75,6 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            {/* Redes Sociais */}
             <div>
               <h4 className="text-lg font-semibold mb-4">Siga-nos</h4>
               <div className="flex space-x-4">
@@ -88,10 +88,20 @@ const Footer = () => {
                   <Instagram className="h-6 w-6" />
                 </a>
               </div>
+              <div className="mt-6 flex space-x-4">
+                <a href="#" className="hover:text-indigo-400">
+                  <Linkedin className="h-6 w-6" />
+                </a>
+                <a href="#" className="hover:text-indigo-400">
+                  <MessageCircle className="h-6 w-6" />
+                </a>
+                <a href="#" className="hover:text-indigo-400">
+                  <Youtube className="h-6 w-6" />
+                </a>
+              </div>
             </div>
           </div>
 
-          {/* Footer Bottom */}
           <div className="border-t border-gray-800 pt-6 text-center text-sm text-gray-500">
             &copy; {new Date().getFullYear()} SafeNet. Todos os direitos reservados.
           </div>
