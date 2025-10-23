@@ -56,7 +56,7 @@ export default function Header() {
 
             <Link 
               onClick={() => scrollToSection('info')}
-              href={"#"}
+              href={"/Ajuda"}
               className="hover:text-indigo-500 group relative text-gray-700 transition-colors font-medium"
             >
               <span className="relative z-10">Informações</span>
